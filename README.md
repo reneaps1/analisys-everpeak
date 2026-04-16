@@ -1,34 +1,58 @@
-# EverPeak Retail Analysis – Sprint 6 -v2
+# 📊 Proyecto: Análisis de Clientes - ConnectaTel
 
-Este repositorio contiene el análisis realizado durante el Sprint 6 del caso EverPeak–SilverBasket.
+## 🎯 Objetivo del Proyecto
 
-El dataset `everpeak_retail` incluye 2,000 órdenes de clientes con valores faltantes, sentinels, outliers y problemas de calidad diseñados para simular datos reales del retail. :contentReference[oaicite:2]{index=2}
+El objetivo de este proyecto es analizar el comportamiento de los usuarios de ConnectaTel para identificar patrones de uso, segmentar clientes y generar insights accionables que permitan mejorar la oferta de planes y estrategias de negocio.
 
-## 📂 Contenido del repositorio
+---
 
-- `notebooks/everpeak_analysis.ipynb`
-  → Notebook principal con limpieza, EDA, distribuciones, outliers y conclusiones.
+## 📁 Datasets Utilizados
 
-## ▶ Cómo abrir el notebook en Google Colab
+Se trabajó con los siguientes datasets:
 
-Haz clic en el siguiente botón:
+- **users**: información demográfica de los usuarios (edad, ciudad, fechas, plan, etc.).
+- **usage**: registros de uso de los usuarios (llamadas y mensajes), incluyendo variables como duración y longitud.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](URL_DEL_NOTEBOOK_EN_GITHUB)
+---
 
-O:
+## 🔍 Etapas del Análisis
 
-1. Abre el archivo `.ipynb` en GitHub
-2. Haz clic en **Open in Colab**
+El proyecto se desarrolló siguiendo las siguientes etapas:
 
-## 📘 Cómo reproducir el análisis
+1. **Exploración inicial de datos (EDA)**
+   - Revisión de estructura, tipos de datos y valores nulos.
+   - Identificación de inconsistencias.
 
-1. Abre `notebooks/everpeak_analysis.ipynb`
-2. Ejecuta las celdas en orden
-3. El notebook carga automáticamente el dataset desde `/data/` o desde un enlace público (según corresponda)
+2. **Limpieza de datos**
+   - Conversión de tipos (fechas, numéricos).
+   - Manejo de valores nulos.
+   - Validación de datos (fechas futuras, valores inválidos).
 
-## 🧠 Objetivo del análisis
+3. **Análisis exploratorio**
+   - Distribuciones de variables clave (edad, mensajes, llamadas, minutos).
+   - Identificación de outliers mediante IQR.
+   - Comparación por tipo de plan.
 
-- Identificar problemas de calidad de datos
-- Construir un pipeline de limpieza reproducible
-- Analizar comportamientos, distribuciones y outliers
-- Generar insights para el equipo de Estrategia e Integración de EverPeak
+4. **Segmentación de clientes**
+   - Creación de grupos por nivel de uso (Bajo, Medio, Alto, Sin datos).
+   - Análisis por grupos de edad.
+
+5. **Visualización**
+   - Histogramas y gráficos de conteo.
+   - Comparación entre segmentos.
+
+6. **Insights y recomendaciones**
+   - Identificación de segmentos más valiosos.
+   - Detección de oportunidades de negocio.
+   - Propuestas de mejora en planes y datos.
+
+---
+
+## ▶️ Cómo ejecutar el proyecto
+
+Puedes ejecutar este proyecto de las siguientes maneras:
+
+###  Google Colab
+1. Sube el archivo `.ipynb` a Google Colab.
+2. Asegúrate de cargar los datasets necesarios.
+3. Ejecuta las celdas en orden.
